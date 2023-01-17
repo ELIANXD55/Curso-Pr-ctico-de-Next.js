@@ -3,7 +3,7 @@ import AppContext from '@context/AppContext';
 import addToCartImage from '@icons/bt_add_to_cart.svg';
 import addedToCartImage from '@icons/bt_added_to_cart.svg';
 import styles from '@styles/ProductItem.module.scss';
-
+import Image from 'next/image';
 const ProductItem = ({ product }) => {
 	const { state, addToCart } = useContext(AppContext);
 
@@ -25,7 +25,7 @@ const ProductItem = ({ product }) => {
 						className={styles.disabled, styles['add-to-cart-btn']}
 						src={addedToCartImage}
 						alt="added to cart"
-					/> : <img className={styles['add-to-cart-btn'], styles.pointer} src={addToCartImage} alt="add to cart" />}
+					/> : <Image className={styles['add-to-cart-btn'], styles.pointer} src={addToCartImage} alt="add to cart" />}
 				</figure>
 			</div>
 		</div>
